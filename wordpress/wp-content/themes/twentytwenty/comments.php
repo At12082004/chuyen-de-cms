@@ -52,7 +52,17 @@ if (post_password_required()) {
     outline: none;
 }
 
-.comment-form input[type="submit"] {
+/* .comment-form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+} */
+    .comment-form input[type="submit"] {
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -62,6 +72,7 @@ if (post_password_required()) {
     cursor: pointer;
     margin-top: 10px;
 }
+
 
 .comment-form input[type="submit"]:hover {
     background-color: #0056b3;
