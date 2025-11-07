@@ -89,6 +89,43 @@
       border-color: #999;
     }
 
+    .header-actions {
+      gap: 24px;
+    }
+
+    .header-actions .action-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      background: transparent;
+      border: none;
+      padding: 0;
+      color: #2c2c2c;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .header-actions .action-item:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    .header-actions .action-icon {
+      font-size: 20px;
+      color: #333;
+    }
+
+    .header-actions .action-label {
+      font-size: 12px;
+      color: #8a8a8a;
+      letter-spacing: 0.3px;
+    }
+
+    .header-actions .dropdown-menu {
+      min-width: 10rem;
+    }
+
     @media (max-width: 992px) {
       .d-flex.align-items-center.gap-3.flex-grow-1 {
         flex-direction: column;
@@ -98,6 +135,10 @@
       .search-form {
         width: 100%;
         margin-top: 10px;
+      }
+      .header-actions {
+        margin-top: 14px;
+        justify-content: flex-start;
       }
     }
   </style>
@@ -145,24 +186,25 @@
         </nav>
 
         <!-- RIGHT: ICONS -->
-        <div class="d-flex align-items-center gap-3 mt-2 mt-lg-0">
+        <div class="header-actions d-flex align-items-center mt-2 mt-lg-0">
           <!-- Menu -->
-          <button class="btn btn-link text-dark d-flex flex-column align-items-center">
-            <i class="fa-solid fa-ellipsis"></i>
-            <small>Menu</small>
+          <button type="button" class="action-item">
+            <i class="fa-solid fa-ellipsis action-icon"></i>
+            <span class="action-label">Menu</span>
           </button>
 
           <!-- Search -->
-          <a href="<?php echo esc_url(home_url('/')); ?>?s=" class="btn btn-link text-dark d-flex flex-column align-items-center">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <small>Search</small>
+          <a href="<?php echo esc_url(home_url('/')); ?>?s=" class="action-item">
+            <i class="fa-solid fa-magnifying-glass action-icon"></i>
+            <span class="action-label">Search</span>
           </a>
+
 
           <!-- Account -->
           <div class="dropdown">
-            <button class="btn btn-link text-dark dropdown-toggle d-flex flex-column align-items-center" data-bs-toggle="dropdown">
-              <i class="fa-solid fa-user-circle"></i>
-              <small>Account</small>
+            <button class="action-item dropdown-toggle" data-bs-toggle="dropdown">
+              <i class="fa-solid fa-user-circle action-icon"></i>
+              <span class="action-label">Account</span>
             </button>
             <ul class="dropdown-menu dropdown-menu-end shadow-sm">
               <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -179,7 +221,3 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<?php wp_footer(); ?>
-</body>
-</html>
