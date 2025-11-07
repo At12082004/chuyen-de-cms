@@ -11,7 +11,11 @@ if ( 'POST' !== $_SERVER['REQUEST_METHOD'] ) {
 		$protocol = 'HTTP/1.0';
 	}
 
-	header( 'Allow: POST' );
+	// header( 'Allow: POST' );
+	// header( "$protocol 405 Method Not Allowed" );
+	// header( 'Content-Type: text/plain' );
+	// exit;
+		header( 'Allow: POST' );
 	header( "$protocol 405 Method Not Allowed" );
 	header( 'Content-Type: text/plain' );
 	exit;
