@@ -68,7 +68,17 @@ if (post_password_required()) {
 }
 
 /* Nếu chưa đăng nhập */
-.comment-login-message {
+/* .comment-login-message {
+    text-align: center;
+    font-size: 16px;
+    color: #777;
+    padding: 40px;
+    background: #fafafa;
+    border-radius: 8px;
+    margin: 40px auto;
+    border: 1px dashed #ccc;
+} */
+    .comment-login-message {
     text-align: center;
     font-size: 16px;
     color: #777;
