@@ -100,6 +100,7 @@ if (post_password_required()) {
     border: 1px dashed #ccc;
 }
 
+
 /* Danh sách bình luận */
 /* .comment-list {
     list-style: none;
