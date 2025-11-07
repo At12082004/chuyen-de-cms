@@ -80,7 +80,27 @@ if (post_password_required()) {
 }
 
 /* Danh sách bình luận */
-.comment-list {
+/* .comment-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.comment-list li {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.comment-author {
+    font-weight: 600;
+    color: #333;
+}
+
+.comment-metadata {
+    font-size: 13px;
+    color: #777;
+} */
+    .comment-list {
     list-style: none;
     padding: 0;
     margin-top: 40px;
@@ -100,6 +120,7 @@ if (post_password_required()) {
     font-size: 13px;
     color: #777;
 }
+
 </style>
 
 <div class="comment-area">
